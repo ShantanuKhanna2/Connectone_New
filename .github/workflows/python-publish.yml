@@ -7,7 +7,7 @@ on:
 
 jobs:
   build: 
-    runs-on: ShantanauLaptop-2[self-hosted]
+    runs-on: ShantanauLaptop-2
 
     steps:  
     - name: Checkout code
