@@ -31,5 +31,5 @@ jobs:
       
     - name: Run python script
       run: python Collection_Box.py
-      working-directory: D:\a\Connectone_New\Voucher_Entries
+      working-directory: D:\a\Connectone_New\Connectone_New\Voucher_Entries
       shell: cmd
