@@ -37,6 +37,6 @@ jobs:
         python -m pip install webdriver-manager selenium
       
     - name: Run python script
-      run: python Collection_Box.py
+      run: python Bank_to_Bank_transfer.py
       working-directory: D:\a\Connectone_New\Connectone_New\Voucher_Entries
       shell: cmd
