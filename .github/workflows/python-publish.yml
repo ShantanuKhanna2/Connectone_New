@@ -7,7 +7,7 @@ on:
 
 jobs:
   run_python: 
-    runs-on: ShantanuLaptop
+    runs-on: ShantanuLaptop-2
 
     steps:  
     - name: Checkout code
