@@ -3,8 +3,7 @@ name: Python application for System
 on:
   workflow_dispatch:
   push:
-    branches: 
-         - master
+    branches: ["main"]
 
 jobs:
   run_python: 
