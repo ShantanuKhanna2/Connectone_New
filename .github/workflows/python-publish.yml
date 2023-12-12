@@ -22,6 +22,7 @@ jobs:
       uses: actions/setup-python@v5.0.0
       with:
         python-version: "3.11"
+        elevated: true
 
     - name: Python version
       run: python --version
