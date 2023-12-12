@@ -12,15 +12,15 @@ jobs:
     steps:  
     - name: Checkout code
       uses: actions/checkout@v3
+
+    - name: Print current Working directory
+      run: echo "Current working directory:%CD%"
+       # $currentDirectory = Get - Location   
       
     - name: Set up Python 3.11
       uses: actions/setup-python@v3
       with:
         python-version: "3.11"
-
-    - name: Print current Working directory
-      run: echo "Current working directory:%CD%"
-       # $currentDirectory = Get - Location
 
     - name: Python version
       run: python --version
