@@ -6,7 +6,7 @@ on:
     branches: ["main"]
 
 jobs:
-  run_python: 
+  build: 
     runs-on: ShantanauLaptop-2[self-hosted]
 
     steps:  
