@@ -21,6 +21,9 @@ jobs:
     - name: Print current Working directory
       run: echo "Current working directory:%CD%"
        # $currentDirectory = Get - Location
+
+    - name: Python version
+      run: python --version
         
     - name: Install dependencies
       run: |
