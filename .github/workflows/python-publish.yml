@@ -15,12 +15,13 @@ jobs:
 
     - name: Print current Working directory
       run: echo "Current working directory:%CD%"
+           cd C:\Windows\system32
        # $currentDirectory = Get - Location   
       
-    #- name: Set up Python 3.11
-    #  uses: actions/setup-python@v3
-    #  with:
-    #    python-version: "3.11"
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5.0.0
+      with:
+        python-version: "3.11"
 
     - name: Python version
       run: python --version
