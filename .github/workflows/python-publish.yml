@@ -20,7 +20,7 @@ jobs:
 
     - name: Print current Working directory
       run: echo "Current working directory:%CD%"
-      shell: cmd
+      
        # $currentDirectory = Get - Location
         
     - name: Install dependencies
@@ -32,4 +32,4 @@ jobs:
     - name: Run python script
       run: python Collection_Box.py
       working-directory: D:\a\Connectone_new\Connectone\Voucher_Entries
-      shell: cmd
+    
