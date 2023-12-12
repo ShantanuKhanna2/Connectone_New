@@ -8,7 +8,7 @@ on:
 
 jobs:
   run_python: 
-    runs-on: DESKTOP-68EAEJ5
+    runs-on: ShantanuLaptop
 
     steps:  
     - name: Checkout code
