@@ -7,7 +7,7 @@ on:
 
 jobs:
   run_python: 
-    runs-on: ShantanauLaptop-2           
+    runs-on: [ShantanauLaptop-2]           
 
     steps:  
     
