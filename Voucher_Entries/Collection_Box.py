@@ -2,7 +2,7 @@ import datetime
 import calendar
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
-from selenium.common import NoSuchElementException, StaleElementReferenceException
+from selenium.common import NoSuchElementException
 from selenium.webdriver import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -12,7 +12,7 @@ import random
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
-from datetime import date, timedelta
+from datetime import date
 
 Chrome_options = Options()
 chrome_service = Service(executable_path=ChromeDriverManager().install())
