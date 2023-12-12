@@ -7,7 +7,7 @@ on:
 
 jobs:
   run_python: 
-    runs-on: windows-latest           
+    runs-on: ShantanauLaptop-2           
 
     steps:  
     
@@ -29,7 +29,7 @@ jobs:
 
     - name: Print current Working directory
       run: echo "Current working directory:%CD%"
-      shell: cmd
+      #shell: cmd
        # $currentDirectory = Get - Location
         
     - name: Install dependencies
@@ -48,4 +48,4 @@ jobs:
     - name: Run python script
       run: python Bank_to_Bank_transfer.py
       working-directory: D:\a\Connectone_New\Connectone_New\Voucher_Entries
-      shell: cmd
+      #shell: cmd
