@@ -40,22 +40,22 @@ jobs:
     #     # Install Python silently
     #     Start-Process python-3.9.7-amd64.exe -ArgumentList "/quiet", "InstallAllUsers=1", "PrependPath=1" -Wait
 
-    - name: Install Python
-      run: |
-         Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe -OutFile python-installer.exe
-         Start-Process -Wait -FilePath python-installer.exe -ArgumentList "/quiet", "InstallAllUsers=0", "PrependPath=1", "Include_test=0", "Include_launcher=0", "TargetDir=C:\Python39"
-         Remove-Item python-installer.exe
+    # - name: Install Python
+    #   run: |
+    #      Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe -OutFile python-installer.exe
+    #      Start-Process -Wait -FilePath python-installer.exe -ArgumentList "/quiet", "InstallAllUsers=0", "PrependPath=1", "Include_test=0", "Include_launcher=0", "TargetDir=C:\Python39"
+    #      Remove-Item python-installer.exe
          
-    - name: Print Working Directory
-      run: |
-         Get-Location     
+    # - name: Print Working Directory
+    #   run: |
+    #      Get-Location     
          
     - name: Python version
       run: C:\Python\python.exe --version         
         
     - name: Install dependencies
       run: |
-        C:\Python\python.exe -m C:\Users\Shantanu\AppData\Local\Microsoft\WindowsApps\pip.exe install --upgrade pip
+        C:\Python\python.exe -m pip install --upgrade pip
         C:\Python\python.exe install -r requirements.txt
         C:\Python\python.exe install pytest
       
