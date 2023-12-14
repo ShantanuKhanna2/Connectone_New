@@ -21,17 +21,22 @@ jobs:
     
     - name: Checkout code
       uses: actions/checkout@v3
-      
+
+    - name: Print current Working directory
+      run: echo "Current working directory:%CD%"
+           cd C:\Windows\actions-runner\_work\Connectone_New
+           echo "Current working after directory:%CD%"
+      #shell: cmd
+       # $currentDirectory = Get - Location
+
+    - name: Python version
+      run: python --version
+         
     - name: Set up Python 3.11
       uses: actions/setup-python@v3
       with:
         python-version: "3.11.7"
 
-    - name: Print current Working directory
-      run: echo "Current working directory:%CD%"
-      #shell: cmd
-       # $currentDirectory = Get - Location
-        
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
