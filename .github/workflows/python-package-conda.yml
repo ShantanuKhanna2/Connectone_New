@@ -1,0 +1,43 @@
+name: Python Installation
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+jobs:
+  build: 
+    runs-on: ShantanauLaptop-2
+
+    steps:  
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Print current Working directory
+      run: |
+        echo "Current working directory:%CD%"
+        cd C:\Windows\actions-runner\_work\Connectone_New\Connectone_New
+        echo "Current working directory after cd:%CD%"
+
+    - name: Download and Install Python
+      run: |
+        # Download Python
+        Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.11.6/python-3.11.6-embed-amd64.zip -OutFile C:\python.zip
+
+        # Extract Python
+        Expand-Archive -Path C:\python.zip -DestinationPath C:\Python -Force
+
+        # Add Python to PATH
+        $env:PATH = "C:\Python;C:\Python\Scripts;" + $env:PATH
+
+    - name: Python version
+      run: python --version         
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest
+      
+    - name: Run python script
+      run: python D:\a\Connectone_new\Connectone_new\Voucher_Entries\Collection_Box.py
