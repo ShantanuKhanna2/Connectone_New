@@ -41,7 +41,7 @@ jobs:
         cache: 'pip'
         architecture: 'x64'
       env:
-        AGENT_TOOLSDIRECTORY: /opt/github/actions-runner/_work/_tool
+        NT AUTHORITY: /opt/github/actions-runner/_work/_tool
     
     - name: Python version
       run: python --version         
