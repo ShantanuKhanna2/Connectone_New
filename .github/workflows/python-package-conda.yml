@@ -21,8 +21,11 @@ jobs:
 
     - name: Download and Install Python
       run: |
+        # Get the latest Python release asset URL
+        $pythonAssetUrl = Invoke-RestMethod -Uri "https://api.github.com/repos/actions/python-versions/releases/latest" | Select-Object -ExpandProperty assets | Where-Object { $_.name -eq 'python-3.11.7-win32-x64.zip' } | Select-Object -ExpandProperty browser_download_url
+
         # Download Python
-        Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.11.6/python-3.11.6-embed-amd64.zip -OutFile "${{ runner.workspace }}/python.zip"
+        Invoke-WebRequest -Uri $pythonAssetUrl -OutFile C:\python.zip
 
         # Extract Python
         Expand-Archive -Path C:\python.zip -DestinationPath C:\Python -Force
