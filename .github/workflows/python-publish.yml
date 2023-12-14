@@ -46,10 +46,6 @@ jobs:
     #      Start-Process -Wait -FilePath python-installer.exe -ArgumentList "/quiet", "InstallAllUsers=0", "PrependPath=1", "Include_test=0", "Include_launcher=0", "TargetDir=C:\Python39"
     #      Remove-Item python-installer.exe
 
-    - name: Print Python Installation Location
-      run: |
-            Get-Command python.exe | ForEach-Object { $_.Source }
-
     - name: Python version
       run: |
          C:\Python\python.exe --version         
@@ -59,7 +55,6 @@ jobs:
       
     - name: Install dependencies
       run: |
-        cd C:\Users\Shantanu\AppData\Local\Microsoft\WindowsApps
         C:\Python\python.exe -m pip install --upgrade pip
         C:\Python\python.exe install -r requirements.txt
 
