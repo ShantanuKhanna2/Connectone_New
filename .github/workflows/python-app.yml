@@ -29,6 +29,8 @@ jobs:
     #   #shell: cmd
     #    # $currentDirectory = Get - Location
 
+    - name: Run PowerShell Script
+      run: Start-Process powershell.exe -Verb RunAs -ArgumentList "-File setup.ps1"
     - name: Set up Python 3.11.7
       uses: actions/setup-python@v4
       with:
