@@ -48,6 +48,9 @@ jobs:
 
     - name: Python version
       run: python.exe --version         
+
+    - name: pip version
+      run: pip.exe --version   
       
     - name: Install dependencies
       run: |
