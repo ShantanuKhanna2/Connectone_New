@@ -13,10 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # - name: Print current Working directory
-    #   run: echo "Current working directory:%CD%"
-    #        cd C:\Windows\actions-runner\_work\Connectone_New\Connectone_New
-    #    # $currentDirectory = Get - Location  
+    - name: Print current Working directory
+      run: echo "Current working directory:%CD%"
+           cd C:\Windows\actions-runner\_work\_tool
+       # $currentDirectory = Get - Location  
 
     - name: Download Python
       run: |
@@ -29,11 +29,24 @@ jobs:
         Set-Location -Path python
         Get-Location
 
-    - name: Add Python to PATH
-      run: |
-       echo "::add-path::${{ github.workspace }}/python"
-       echo "PYTHON=${{ github.workspace }}/python/python.exe" >> $GITHUB_ENV
+    # - name: Add Python to PATH
+    #   run: |
+    #    echo "::add-path::${{ github.workspace }}/python"
+    #    echo "PYTHON=${{ github.workspace }}/python/python.exe" >> $GITHUB_ENV
 
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # Replace with the desired Python version
+        cache: 'pip'
+        architecture: 'x64'
+        token: ${{ github.token }}
+        cache-dependency-path: |
+          ./path/to/dependency/file
+      env:
+        PYTHONUSERBASE: ${{ github.workspace }}/python
+        CACHE_KEY: python-3.x-${{ runner.os }}
+    
     - name: Python version
       run: python --version         
         
