@@ -31,9 +31,8 @@ jobs:
 
     - name: Add Python to PATH
       run: |
-        $pythonPath = "${{ github.workspace }}/python"
-        Write-Host "##[add-path]$pythonPath"
-        Write-Host "##[set-env name=PYTHON]${pythonPath}\python.exe"
+       echo "::add-path::${{ github.workspace }}/python"
+       echo "PYTHON=${{ github.workspace }}/python/python.exe" >> $GITHUB_ENV
 
     - name: Python version
       run: python --version         
