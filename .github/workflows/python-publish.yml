@@ -46,7 +46,7 @@ jobs:
          Start-Process -Wait -FilePath python-installer.exe -ArgumentList "/quiet", "InstallAllUsers=0", "PrependPath=1", "Include_test=0", "Include_launcher=0", "TargetDir=C:\Python39"
          Remove-Item python-installer.exe
     - name: Python version
-      run: python --version         
+      run: C:\Python\python.exe --version         
         
     - name: Install dependencies
       run: |
