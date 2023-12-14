@@ -57,6 +57,7 @@ jobs:
         
     - name: Install dependencies
       run: |
+        cd C:\Users\Shantanu\AppData\Local\Microsoft\WindowsApps
         C:\Python\python.exe -m pip install --upgrade pip
         C:\Python\python.exe install -r requirements.txt
 
