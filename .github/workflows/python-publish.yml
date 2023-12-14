@@ -50,10 +50,10 @@ jobs:
         
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install pytest
+        C:\Python\python.exe -m pip install --upgrade pip
+        C:\Python\python.exe install -r requirements.txt
+        C:\Python\python.exe install pytest
       
     - name: Run python script
-      run: python Collection_Box.py
+      run: C:\Python\python.exe Collection_Box.py
       working-directory: D:\a\Connectone_new\Connectone_new\Voucher_Entries
