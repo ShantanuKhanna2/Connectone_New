@@ -20,7 +20,6 @@ jobs:
 
     - name: Download Python
       run: |
-        cd C:\Windows\actions-runner\_work\_tool\Python\3.11.7\x64
         $downloadUrl = "https://github.com/actions/python-versions/releases/download/3.11.7-7098196908/python-3.11.7-win32-x64.zip"
         Invoke-WebRequest -Uri $downloadUrl -OutFile python.zip
         Expand-Archive -Path python.zip -DestinationPath python
