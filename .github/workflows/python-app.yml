@@ -30,17 +30,9 @@ jobs:
     #    # $currentDirectory = Get - Location
 
     - name: Set up Python 3.11
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
       with:
          python-version: 3.11
-         cache: 'pip'
-         architecture: 'x64'
-         token: ${{ github.token }}
-         cache-dependency-path: |
-          ./path/to/dependency/file
-      env:
-        PYTHONUSERBASE: ${{ github.workspace }}/python
-        CACHE_KEY: python-3.11-${{ runner.os }}
 
     - name: Print working directory
       run: |
