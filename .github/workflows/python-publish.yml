@@ -61,9 +61,9 @@ jobs:
          
 
     - name: pytest version
-      run: |
-       python -m pip install selenium
-       python -m pytest
+      run: pytest --version
+      # python -m pip install selenium
+        
       
     - name: Run python script
       run: python Collection_Box.py
