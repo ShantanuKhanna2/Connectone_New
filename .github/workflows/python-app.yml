@@ -39,6 +39,7 @@ jobs:
          cache-dependency-path: |
           ./path/to/dependency/file
       env:
+        PYTHONUSERBASE: ${{ github.workspace }}/python
         CACHE_KEY: python-3.8-${{ runner.os }}
 
     - name: Print working directory
