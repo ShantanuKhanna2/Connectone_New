@@ -47,8 +47,7 @@ jobs:
     #      Remove-Item python-installer.exe
 
     - name: Python version
-      run: |
-         C:\Python\python.exe --version         
+      run: python.exe --version         
       
     - name: Install dependencies
       run: |
