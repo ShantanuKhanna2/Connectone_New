@@ -50,16 +50,19 @@ jobs:
       run: python.exe --version         
 
     - name: pip version
-      run: python -m pip --version   
+      run: |
+       python -m pip --version   
+       python -m pip freeze 
       
- #   - name: Install dependencies
- #     run: |
+    - name: Install dependencies
+      run: python install -r requirements.txt
        # C:\Python\python.exe -m pip install --upgrade pip
  #       cd C:\Windows\actions-runner\_work\Connectone_New\Connectone_New
-     #   python install -r requirements.txt
+         
 
     - name: pytest version
       run: |
+       python -m pip freeze 
        python -m selenium
        python -m pytest
       
