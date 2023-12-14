@@ -35,13 +35,10 @@ jobs:
     #    echo "PYTHON=${{ github.workspace }}/python/python.exe" >> $GITHUB_ENV
 
     - name: Set up Python
-      uses: actions/setup-python@v3
-      with:
-        python-version: '3.8'  # Replace with the desired Python version
-        cache: 'pip'
-        architecture: 'x64'
-      env:
-        NT AUTHORITY: /opt/github/actions-runner/_work/_tool
+      run: |
+        Invoke-WebRequest -Uri "https://www.python.org/ftp/python/3.9.7/python-3.9.7-amd64.exe" -OutFile python-3.9.7-amd64.exe
+        # Install Python silently
+        Start-Process python-3.9.7-amd64.exe -ArgumentList "/quiet", "InstallAllUsers=1", "PrependPath=1" -Wait
     
     - name: Python version
       run: python --version         
