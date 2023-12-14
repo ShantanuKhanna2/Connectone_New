@@ -58,9 +58,8 @@ jobs:
  #       cd C:\Windows\actions-runner\_work\Connectone_New\Connectone_New
      #   python install -r requirements.txt
 
-    - name: Install pytest
-      run: |
-        python install pytest
+    - name: pytest version
+      run: pytest --version
       
     - name: Run python script
       run: python Collection_Box.py
