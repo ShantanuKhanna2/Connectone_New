@@ -29,11 +29,11 @@ jobs:
         Set-Location -Path python
         Get-Location
 
-#    - name: Add Python to PATH
-#      run: |
-#        $pythonPath = "$(Agent.TempDirectory)\python"
-#        Write-Host "##[add-path]$pythonPath"
-#        Write-Host "##[set-env name=PYTHON]${pythonPath}\python.exe"
+    - name: Add Python to PATH
+      run: |
+        $pythonPath = "${{ github.workspace }}/python"
+        Write-Host "##[add-path]$pythonPath"
+        Write-Host "##[set-env name=PYTHON]${pythonPath}\python.exe"
 
     - name: Python version
       run: python --version         
