@@ -53,6 +53,7 @@ jobs:
     - name: Install dependencies
       run: |
         C:\Python\python.exe -m pip install --upgrade pip
+        cd C:\Windows\actions-runner\_work\Connectone_New\Connectone_New
         C:\Python\python.exe install -r requirements.txt
 
     - name: Install pytest
