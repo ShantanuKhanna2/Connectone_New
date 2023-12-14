@@ -1,0 +1,46 @@
+name: Python application for windows
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ] 
+
+jobs:
+  run_python: 
+    runs-on: windows-latest           
+
+    steps:  
+    
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+         python-version: 3.x
+
+    - name: Print working directory
+      run: |
+        $currentDirectory = Get - Location
+        "Current diretory is: $currentDirectory"
+
+    - name: Python version
+      run: python --version
+         
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m venv venv
+        venv\Scripts\activate
+        pip install -r requirements.txt
+        pip install webdriver-manager
+      #working-directory: D:\a\Connectone_New\Connectone_New\requirements.txt
+
+    - name: Install webdriver_manager
+      run: |
+        python -m pip install webdriver-manager selenium
+      
+    - name: Run python script
+      run: python Bank_to_Bank_transfer.py
+      working-directory: D:\a\Connectone_New\Connectone_New\Voucher_Entries
+      #shell: cmd
