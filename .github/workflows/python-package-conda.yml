@@ -22,7 +22,7 @@ jobs:
     - name: Download and Install Python
       run: |
         # Download Python
-        Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.11.6/python-3.11.6-embed-amd64.zip -OutFile C:\python.zip
+        Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.11.6/python-3.11.6-embed-amd64.zip -OutFile "${{ runner.workspace }}/python.zip"
 
         # Extract Python
         Expand-Archive -Path C:\python.zip -DestinationPath C:\Python -Force
