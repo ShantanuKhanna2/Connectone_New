@@ -29,10 +29,10 @@ jobs:
     #   #shell: cmd
     #    # $currentDirectory = Get - Location
 
-    - name: Set up Python 3.6
+    - name: Set up Python 3.11.7
       uses: actions/setup-python@v4
       with:
-         python-version: 3.6
+         python-version: 3.11.7
 
     - name: Print working directory
       run: |
