@@ -18,11 +18,10 @@ jobs:
            cd C:\Windows\actions-runner\_work\Connectone_New\Connectone_New
        # $currentDirectory = Get - Location  
 
-    - name: Set up Python 3.11
+    - name: Set up Python 3.8
       uses: actions/setup-python@v5.0.0
       with:
-        python-version: "3.11"
-        elevated: true
+        python-version: "3.8"
 
     - name: Python version
       run: python --version         
