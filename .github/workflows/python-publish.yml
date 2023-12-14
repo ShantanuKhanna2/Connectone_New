@@ -24,11 +24,11 @@ jobs:
         Invoke-WebRequest -Uri $downloadUrl -OutFile python.zip
         Expand-Archive -Path python.zip -DestinationPath python
 
-    - name: Add Python to PATH
-      run: |
-        $pythonPath = "$(Agent.TempDirectory)\python"
-        Write-Host "##[add-path]$pythonPath"
-        Write-Host "##[set-env name=PYTHON]${pythonPath}\python.exe"
+#    - name: Add Python to PATH
+#      run: |
+#        $pythonPath = "$(Agent.TempDirectory)\python"
+#        Write-Host "##[add-path]$pythonPath"
+#        Write-Host "##[set-env name=PYTHON]${pythonPath}\python.exe"
 
     - name: Python version
       run: python --version         
