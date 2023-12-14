@@ -52,16 +52,16 @@ jobs:
     - name: pip version
       run: python -m pip --version   
       
-    - name: Install dependencies
-      run: |
-        C:\Python\python.exe -m pip install --upgrade pip
-        cd C:\Windows\actions-runner\_work\Connectone_New\Connectone_New
-        C:\Python\python.exe install -r requirements.txt
+ #   - name: Install dependencies
+ #     run: |
+       # C:\Python\python.exe -m pip install --upgrade pip
+ #       cd C:\Windows\actions-runner\_work\Connectone_New\Connectone_New
+     #   python install -r requirements.txt
 
     - name: Install pytest
       run: |
-        C:\Python\python.exe install pytest
+        python install pytest
       
     - name: Run python script
-      run: C:\Python\python.exe Collection_Box.py
-      working-directory: D:\a\Connectone_new\Connectone_new\Voucher_Entries
+      run: python Collection_Box.py
+      working-directory: C:\Windows\actions-runner\_work\Connectone_New\Connectone_New\Voucher_Entries
