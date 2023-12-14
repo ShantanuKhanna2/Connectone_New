@@ -52,9 +52,11 @@ jobs:
 
     - name: Python version
       run: |
-         cd C:\Python\
-         python.exe --version         
-        
+         C:\Python\python.exe --version         
+
+    - name: Add Python Scripts to PATH
+      run: echo "##[add-path]C:\Python\Scripts"  
+      
     - name: Install dependencies
       run: |
         cd C:\Users\Shantanu\AppData\Local\Microsoft\WindowsApps
