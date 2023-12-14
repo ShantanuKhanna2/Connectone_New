@@ -51,12 +51,17 @@ jobs:
             Get-Command python.exe | ForEach-Object { $_.Source }
 
     - name: Python version
-      run: C:\Python\python.exe --version         
+      run: |
+         cd C:\Python\
+         python.exe --version         
         
     - name: Install dependencies
       run: |
         C:\Python\python.exe -m pip install --upgrade pip
         C:\Python\python.exe install -r requirements.txt
+
+    - name: Install pytest
+      run: |
         C:\Python\python.exe install pytest
       
     - name: Run python script
