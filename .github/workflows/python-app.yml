@@ -11,21 +11,21 @@ jobs:
 
     steps:  
     
-    - name: Setup Browser
+#    - name: Setup Browser
   # You may pin to the exact commit or the version.
   # uses: abhi1693/setup-browser@311d294ea9c5d710f61204ba3c4c3d31fa62443e
-      uses: abhi1693/setup-browser@v0.3.5
-      with:
+#      uses: abhi1693/setup-browser@v0.3.5
+#      with:
     # The browser to install [chrome, edge, firefox].
-        browser: chrome
+#        browser: chrome
     
     - name: Checkout code
       uses: actions/checkout@v3
       
-    - name: Set up Python 3.10
+    - name: Set up Python 3.11
       uses: actions/setup-python@v3
       with:
-        python-version: "3.10"
+        python-version: "3.11.7"
 
     - name: Print current Working directory
       run: echo "Current working directory:%CD%"
