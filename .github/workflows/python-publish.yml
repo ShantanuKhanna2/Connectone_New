@@ -49,9 +49,6 @@ jobs:
     - name: Python version
       run: |
          C:\Python\python.exe --version         
-
-    - name: Add Python Scripts to PATH
-      run: echo "##[add-path]C:\Python\Scripts"  
       
     - name: Install dependencies
       run: |
