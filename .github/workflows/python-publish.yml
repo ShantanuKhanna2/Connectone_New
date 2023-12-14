@@ -61,7 +61,7 @@ jobs:
          
 
     - name: pytest version
-      run: pytest --version
+      run: python -m pytest --version
       # python -m pip install selenium
         
       
