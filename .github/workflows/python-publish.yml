@@ -59,7 +59,7 @@ jobs:
      #   python install -r requirements.txt
 
     - name: pytest version
-      run: pytest --version
+      run: python -m pytest
       
     - name: Run python script
       run: python Collection_Box.py
