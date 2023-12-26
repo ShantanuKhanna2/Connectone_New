@@ -59,12 +59,11 @@ jobs:
        # C:\Python\python.exe -m pip install --upgrade pip
  #       cd C:\Windows\actions-runner\_work\Connectone_New\Connectone_New
          
-
-    - name: pytest version
+# for pytest, kept it in a script folder and environment variable
+    - name: pytest version 
       run: python -m pytest --version
       # python -m pip install selenium
         
-      
     - name: Run python script
-      run: python Collection_Box.py
+      run: pytest test_BanktoBank.py --html=report.html
       working-directory: C:\Windows\actions-runner\_work\Connectone_New\Connectone_New\Voucher_Entries
