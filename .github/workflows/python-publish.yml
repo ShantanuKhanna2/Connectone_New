@@ -45,6 +45,14 @@ jobs:
     #      Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe -OutFile python-installer.exe
     #      Start-Process -Wait -FilePath python-installer.exe -ArgumentList "/quiet", "InstallAllUsers=0", "PrependPath=1", "Include_test=0", "Include_launcher=0", "TargetDir=C:\Python39"
     #      Remove-Item python-installer.exe
+
+    - name: Add Allure to PATH
+      run: |
+         echo "C:\Users\Shantanu\scoop\apps\allure\2.24.0\bin" >> $GITHUB_PATH
+
+    - name: Allure version
+      run: allure --version
+
 #note: in your _work folder python should there, and in system variable: python, pytest, pip path, and python/scripts
     - name: Python version
       run: python.exe --version         
