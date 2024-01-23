@@ -65,5 +65,5 @@ jobs:
       # python -m pip install selenium
         
     - name: Run python script
-      run: C:\Python\Scripts\pytest.exe test_BanktoBank.py
+      run: C:\Python\Scripts\pytest.exe test_BanktoBank.py --html=report.html
       working-directory: C:\Windows\actions-runner\_work\Connectone_New\Connectone_New\Test_Voucher
