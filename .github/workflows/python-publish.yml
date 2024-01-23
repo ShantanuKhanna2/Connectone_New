@@ -51,7 +51,7 @@ jobs:
          echo "C:\Users\Shantanu\scoop\apps\allure\2.24.0\bin" >> $GITHUB_PATH
 
     - name: Allure version
-      run: allure --version
+      run: C:\Users\Shantanu\scoop\apps\allure\2.24.0\bin\allure.bat --version
 
 #note: in your _work folder python should there, and in system variable: python, pytest, pip path, and python/scripts
     - name: Python version
@@ -75,5 +75,5 @@ jobs:
     - name: Run python script
       run: |
        pytest test_BanktoBank.py --alluredir=./allurereports
-       allure serve ./allurereports
+       C:\Users\Shantanu\scoop\apps\allure\2.24.0\bin\allure.bat serve ./allurereports
       working-directory: C:\Windows\actions-runner\_work\Connectone_New\Connectone_New\Test_Voucher
