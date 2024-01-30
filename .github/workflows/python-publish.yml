@@ -1,6 +1,8 @@
 name: Python application for System
 
 on:
+  repository_dispatch:
+    types: ["trigger-repo-b"]
   workflow_dispatch:
   push:
     branches: ["main"]
