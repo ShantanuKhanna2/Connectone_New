@@ -76,7 +76,7 @@ jobs:
         
     - name: Run python script
       run: |
-       pytest test_BanktoBank.py 
-       # --alluredir=./allurereports
+       pytest test_BanktoBank.py --alluredir=./allurereports
+       allure serve re
        # C:\Users\Shantanu\scoop\apps\allure\2.24.0\bin\allure.bat serve ./allurereports
       working-directory: C:\Windows\actions-runner\_work\Connectone_New\Connectone_New\Test_Voucher
