@@ -4,12 +4,10 @@ on:
   repository_dispatch:
     types: ["trigger-repo-b"]
   workflow_dispatch:
-  push:
-    branches: ["main"]
 
 jobs:
   build: 
-    runs-on: ShantanauLaptop-2
+    runs-on: Self-Hosted Runner Laptop
 
     steps:  
     - name: Checkout code
@@ -19,6 +17,21 @@ jobs:
       run: echo "Current working directory:%CD%"
            $currentDirectory = Get - Location  
            #cd C:\Windows\actions-runner\_work\_tool\Python\3.11.7\x64
+
+    - name: Add Allure to PATH
+      run: |
+         echo "C:\Users\Shantanu\scoop\apps\allure\2.24.0\bin" >> $GITHUB_PATH
+
+    - name: pytest version 
+      run: python -m pytest --version
+      # python -m pip install selenium
+        
+    - name: Run python script
+      run: |
+       pytest test_BanktoBank.py --alluredir=./allurereports
+       allure serve re
+       # C:\Users\Shantanu\scoop\apps\allure\2.24.0\bin\allure.bat serve ./allurereports
+      working-directory: C:\Windows\actions-runner\_work\Connectone_New\Connectone_New\Test_Voucher
 
     # - name: Download Python
     #   run: |
