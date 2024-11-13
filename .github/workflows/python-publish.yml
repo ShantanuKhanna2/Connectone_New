@@ -5,11 +5,11 @@ on:
     types: ["trigger-repo-b"]
   workflow_dispatch:
   push:
-   branches: main
+   branches: master
 
 jobs:
   build: 
-    runs-on: Self-Hosted Runner Laptop
+    runs-on: ShantanuLaptop-2
 
     steps:  
     - name: Checkout code
